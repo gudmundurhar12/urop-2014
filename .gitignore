@@ -1,0 +1,12 @@
+*sagetex*
+*.pdf
+*.log
+*.aux
+*.fls
+.*.swp
+*.swp
+*.fdb_latexmk
+*.out
+code.py
+*_doctest.sage
+*_doctest.py

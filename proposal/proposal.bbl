@@ -1,0 +1,79 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Banko and Brill}2001]{banko_scaling_2001}
+Michele Banko and Eric Brill.
+\newblock 2001.
+\newblock Scaling to very very large corpora for natural language
+  disambiguation.
+\newblock In {\em Proceedings of the 39th Annual Meeting on Association for
+  Computational Linguistics}, {ACL} '01, page 26–33, Stroudsburg, {PA},
+  {USA}. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Helgadóttir \bgroup et al.\egroup
+  }2012]{helgadottir_tagged_2012}
+Sigrún Helgadóttir, Ásta Svavarsdóttir, Eiríkur Rögnvaldsson, Kristín
+  Bjarnadóttir, and Hrafn Loftsson.
+\newblock 2012.
+\newblock The tagged icelandic corpus (mím).
+\newblock {\em Language Technology for Normalisation of Less-Resourced
+  Languages}, page~67.
+
+\bibitem[\protect\citename{Scharl \bgroup et al.\egroup
+  }2012]{scharl_leveraging_2012}
+Arno Scharl, Marta Sabou, Stefan Gindl, Walter Rafelsberger, and Albert
+  Weichselbraun.
+\newblock 2012.
+\newblock Leveraging the wisdom of the crowds for the acquisition of
+  multilingual language resources.
+
+\bibitem[\protect\citename{Siorpaes and Hepp}2008]{siorpaes_games_2008}
+Katharina Siorpaes and Martin Hepp.
+\newblock 2008.
+\newblock Games with a purpose for the semantic web.
+\newblock {\em Intelligent Systems, {IEEE}}, 23(3):50–60.
+
+\bibitem[\protect\citename{Snow \bgroup et al.\egroup }2008]{snow_cheap_2008}
+Rion Snow, Brendan {O'Connor}, Daniel Jurafsky, and Andrew~Y. Ng.
+\newblock 2008.
+\newblock Cheap and fast—but is it good?: evaluating non-expert annotations
+  for natural language tasks.
+\newblock In {\em Proceedings of the conference on empirical methods in natural
+  language processing}, page 254–263.
+
+\bibitem[\protect\citename{Von~Ahn and Dabbish}2004]{von_ahn_labeling_2004}
+Luis Von~Ahn and Laura Dabbish.
+\newblock 2004.
+\newblock Labeling images with a computer game.
+\newblock In {\em Proceedings of the {SIGCHI} conference on Human factors in
+  computing systems}, page 319–326.
+
+\bibitem[\protect\citename{von Ahn and Dabbish}2008]{von_ahn_designing_2008}
+Luis von Ahn and Laura Dabbish.
+\newblock 2008.
+\newblock Designing games with a purpose.
+\newblock {\em Commun. {ACM}}, 51(8):58–67, August.
+
+\bibitem[\protect\citename{Von~Ahn \bgroup et al.\egroup
+  }2006a]{von_ahn_improving_2006}
+Luis Von~Ahn, Shiry Ginosar, Mihir Kedia, Ruoran Liu, and Manuel Blum.
+\newblock 2006a.
+\newblock Improving accessibility of the web with a computer game.
+\newblock In {\em Proceedings of the {SIGCHI} conference on Human Factors in
+  computing systems}, page 79–82.
+
+\bibitem[\protect\citename{Von~Ahn \bgroup et al.\egroup
+  }2006b]{von_ahn_peekaboom:_2006-1}
+Luis Von~Ahn, Ruoran Liu, and Manuel Blum.
+\newblock 2006b.
+\newblock Peekaboom: a game for locating objects in images.
+\newblock In {\em Proceedings of the {SIGCHI} conference on Human Factors in
+  computing systems}, page 55–64.
+
+\bibitem[\protect\citename{Von~Ahn}2009]{von_ahn_human_2009}
+Luis Von~Ahn.
+\newblock 2009.
+\newblock Human computation.
+\newblock In {\em Design Automation Conference, 2009. {DAC'09.} 46th
+  {ACM/IEEE}}, page 418–419.
+
+\end{thebibliography}

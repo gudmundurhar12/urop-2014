@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{acl2012}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{listings}
+\usepackage[norelsize,ruled,vlined]{algorithm2e}
+
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+\frenchspacing
+
+
+% Custom commands
+\newcommand{\class}[1]{\sloppy{\texttt{#1}}}
+
+\newenvironment{definitions}[1]%
+{\begin{list}{}{\settowidth{\labelwidth}{\textbf{#1}}
+            \setlength{\leftmargin}{\labelwidth}
+            \addtolength{\leftmargin}{\labelsep}
+    \renewcommand{\makelabel}[1]{\textbf{\hfill##1}}}}%
+{\end{list}}
+
+\title{
+    Fun and functional? An experiment in crowdsourcing named entity tags\\
+    (UROP 12 ECTS Project Proposal)\thanks{This would constitue a final project (ísl. Lokaverkefni) for all three members according to above order: BSc in Discrete Mathematics and Computer Science, Diploma in Applied Computing and BSc in Computer Science.}
+}
+
+\author{Ólafur Páll Geirsson, Guðmundur Harðarsson, Guðmundur Þ Guðmundsson \\
+    School of Computer Science \\ 
+    Reykjavik University \\
+    % Menntavegur 1, 101 Reykjavik \\
+    {\tt \{olafurpg11,gudmundurhar12,gudmundurthg\}@ru.is}
+  }
+
+\date{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+    Many natural language processing tasks rely on having large labeled data
+    sets at hand.  For less commonly spoken languages, such may not necessarily
+    exists and tools for collecting them appear in limited numbers. In this
+    project, we propose to use the concept of a “game with a purpose” for
+    collecting large amounts of named entity tags for Icelandic language text.
+\end{abstract}
+
+\section{Introduction}
+The size of available annotated data sets in a given language has an large
+impact on the performance of many core natural language tasks (e.g.\@
+\cite{banko_scaling_2001}). While large-scale annotation tasks for natural
+language processing research on commonly spoken languages (e.g. English,
+Chinese, Arabic) is becoming a feasible option (e.g.\@ \cite{snow_cheap_2008})
+with the introduction of commercial crowdsourcing services (e.g. Amazon
+Mechanical Turk, CrowdFlower), less commonly spoken languages (e.g. Icelandic)
+are left out with no similar option. 
+
+The ESP game \cite{von_ahn_labeling_2004} introduced a novel approach to
+labeling large data sets. In the game, users are paired up and asked to label
+an image depending on its content. If the users agree on the input, they score
+points. The incentive for users to take part in the game is no more than the
+pleasure of playing it, as opposed to the financial reward in commercial
+crowdsourcing services. Through the lifetime of the ESP game, a total of
+1,271,451 labels were generated for 293,760 images which then were released for
+use to further improve image recognition algorithms. This success inspired a new genre of
+games commonly referred to as “games with a purpose” (GWAP), popularized by Luis von Ahn
+\shortcite{von_ahn_human_2009}. Various attempts (e.g.
+\cite{von_ahn_improving_2006,von_ahn_peekaboom:_2006-1,scharl_leveraging_2012,siorpaes_games_2008})
+have been made to repeat the idea on other kinds of labeling tasks with varying
+results.
+
+In this proposed UROP project, we aim to make an attempt to use the GWAP
+concept for labeling named entities (e.g. Iceland as a location, CCP as an organization) in Icelandic text. To our best knowledge,
+this has not been done before. Ahn and Dabbish \shortcite{von_ahn_designing_2008} offer a guide
+to designing a GWAP. They go into three game “templates” that have shown to be
+particularly successful, i.e.\@, output agreement games, inversion-problem
+games, and input-agreement games. We intend to adopt one of these game
+templates while meeting the following requirements:
+\begin{itemize}
+    \item Feature rich interface for the researcher, including the ability to
+        \begin{itemize}
+            \item work with large amounts of text, minimum 250.000 words.
+            \item be language independent
+            \item upload data sets of various formats
+            \item customize taxonomy
+            \item configure the data reliability, e.g. a confidence score for
+                annotation correctness, this includes defining how to measure
+                the data reliability.
+            \item see statistics on annotation progress
+            \item export annotated data
+        \end{itemize}
+    \item User friendly interface for the annotators, this includes
+        developing
+        \begin{itemize}
+            \item an interesting and visually attractive gameplay
+            \item a motivation system (e.g. scoring, awards, recognition)
+        \end{itemize}
+    \item Browser based, cross-platform, both desktop and hand-held devices
+\end{itemize}
+
+In developing this game, we set out to answer the following questions
+\begin{itemize}
+    \item How many human work hours can be mobilized with the game?
+    \item How do these hours compare with the amount of hours put into
+        developing the game itself?
+    \item How efficient is the game with relation the number of accurately
+        labeled named entities per human hour?
+    \item Which scheme is most successful in obtaining reliable named entity
+        labels? (e.g.\@  How many times does a named entity have to be labeled
+        for it to become reliably accurate?)
+    \item Are certain kinds of texts more enjoyable to label than others?
+\end{itemize}
+
+\section{Methodology}
+The project will be split into three phases:
+\begin{enumerate}
+ \item Design the game, inspired by related work in GWAP and conventions in
+     named entity recognition research.
+ \item Develop the game using modern HTML5 web technologies.
+ \item Perform an experimental study to evaluate the game. In this we would use
+     the MIM-GOLD corpus \cite{helgadottir_tagged_2012}. Furthermore, we will
+     use the labelled data to train and evaluate a named entity recognizer.
+     Optionally, this named entity recognizer can be incorporated into a web
+     service for demonstration purposes.
+\end{enumerate}
+
+\section{Goal}
+By doing this project, we aim to meet these following goals
+\begin{itemize}
+    \item Release the source code of the game, which may turn out to be useful
+        in collecting related annotations on other text corpora.
+    \item Release named entity tags for a minimum of 250.000 words from the
+        MIM-GOLD corpus.
+    \item Release a named entity recognizer for Icelandic language text trained
+        on the labeled data
+    \item If successful, it may be possible to present the game at the Language
+        Resources and Evaluation Conference (LREC) in May, 2014, held in Harpan
+        Conference Centre, Reykjavik, e.g. during coffee breaks or in the
+        corridors.
+\end{itemize}
+
+
+\section{Benefits}
+With the project, we also consider the following benefits
+\begin{itemize}
+    \item Create a pathway for future Icelandic information extraction systems,
+        e.g. in healthcare and financial sectors.
+    \item Increase awareness of Icelandic language technology.
+    \item A new tool for use in language technology research to collect
+        annotations on large amounts of text data through gamification and
+        crowdsourcing.
+\end{itemize}
+\section{Learning outcomes}
+Learning outcomes
+We seek to improve our knowledge and skills within various areas of computer science, these include:
+\begin{itemize}
+    \item Designing and developing a server and client side for a web-based game which
+        is both enjoying to play while being useful for a researcher. This, we
+        believe will be one of the key success factors of the project.
+    \item Applying scientific methods to collect reliable data for use in
+        research.
+    \item Extend our knowledge and competence in developing data-driven natural
+        language technologies.
+    \item Direct and manage our own independent learning.
+\end{itemize}
+
+\bibliographystyle{acl2012}
+\bibliography{proposal}
+\end{document}
+
+
+
